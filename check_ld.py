@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check Lemma 4 and Theorem 2 on every graph6 graph read from standard input.
+"""Check Lemma 4 and Theorem 2 on the graph6 graphs read from stdin.
 
 Usage (a 2-degenerate graph of order n has at most 2n - 3 edges):
     geng -c 10 9:17 | python3 check_ld.py
@@ -116,4 +116,5 @@ for line in sys.stdin:
         rest = ((1 << n) - 1) & ~T
         assert is_ld(n, nb, T) and is_ld(n, nb, rest), "Theorem 2 fails"
 
-print(f"{graphs} graphs and {matchings} perfect matchings checked; no failure")
+msg = f"{graphs} graphs and {matchings} perfect matchings checked"
+print(msg + "; no failure")
