@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+filter
+ldscan
+cubicscan
+*.g6
